@@ -2,35 +2,163 @@
 <html lang="en-US">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Black Mountain Resources</title>
-  <link rel="stylesheet" href="/styles/styles.css" />
-  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Mountain Resources</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Include your existing CSS here, with the new modifications */
+
+        /* Subtab visibility adjustments */
+        #resourcesInfo:target .subtab-panel,
+        #official:target .subtab-panel {
+            display: block; /* Hide all subtab panels initially */
+        }
+
+        #subtab1-1:target,
+        #subtab1-2:target,
+        #subtab2-1:target,
+        #subtab2-2:target {
+            display: block; /* Show the targeted subtab */
+        }
+
+        /* Ensure that display: none is set for all subtab panels by default */
+        .subtab-panel {
+            display: block; 
+        }
+    </style>
 </head>
-  <header>
-    <h1>Black Mountain Resources Hub</h1>
-  </header>
 
+<body>
+    <header>
+        <h1>Black Mountain Resources Hub</h1>
+    </header>
 
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Community Resources</a>
+        <a href="supplies.html">Request Supplies</a>
+        <a href="volunteers.html">Volunteers</a>
+        <a href="about.html">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
-<div class="topnav" id="myTopnav">
-  <a href="index.html" class="active">Home</a>
-  <a href="resources.html">Community Resources</a>
-  <a href="supplies.html">Request Supplies</a>
-  <a href="volunteers.html">Volunteers</a>
-  <a href="about.html">About</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-  
-  <body>  
     <hgroup>
-      <h2>Black Mountain Resources Hub Home</h2>
-      <p>Last Updated 19 October 2024</p>
+        <h2>Community Resources List (Recursos Publicos): Black Mountain and Swannanoa</h2>
+        <p>Last Updated 19 October 2024</p>
     </hgroup>
- 
+    
+    <div class="tab-content">
+      <section >
+          <h2>Official Town-Directed Resources</h2></br>
+
+       <div class="table-container">
+                      <table>
+                          <thead>
+                              <tr>
+                                  <th>Provider</th>
+                                  <th>Address</th>
+                                  <th>Hours of Operation</th>
+                                  <th>Resources Provided</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>Ingles Market</td>
+                                  <td>550 NC-9 Black Mountain, NC 28711</td>
+                                  <td>7 days/week, 9:00 am to 7:00 pm</td>
+                                  <td>Dry goods, ice, potable water</td>
+                              </tr>
+                              <tr>
+                                <td>Chamber of Commerce</td>
+                                <td>201 E. State St., Black Mountain, NC 28711</td>
+                                <td>7 days/week, 9:00 am to 5:00 pm</td>
+                                <td>Public info requests, volunteer coordination</td>
+                            </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </section>
+            </br>
+              <h2>Unofficial Voluntary Resources (<i></i> )
+              </h2></br>
+
+    <!-- Navigation for Tabs -->
+    <nav class="tableNav">
+        <ul>
+            <li><a href="#official">Resources Information</a></li>
+            <li><a href="#official">Official Town-Directed Resources</a></li>
+            <li><a href="#unofficial">Unofficial Voluntary Resources</a></li>
+            <li><a href="#all">See all</a></li>
+        </ul>
+    </nav>
+
+    <div class="tab-content">
+        <section id="resourcesInfo" class="tab-panel">
+            <h2>Community Resources List: Black Mountain and Swannanoa</h2>
+            <h3>Official Town-Directed Resources</h3>
+
+
+                <section id="subtab1-1" class="subtab-panel">
+                    <h4>Resource 1 Information</h4>
+                    <p>Details about the first official resource.</p>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Provider</th>
+                                    <th>Address</th>
+                                    <th>Hours of Operation</th>
+                                    <th>Resources Provided</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ingles Market</td>
+                                    <td>550 NC-9 Black Mountain, NC 28711</td>
+                                    <td>7 days/week, 9:00 am to 7:00 pm</td>
+                                    <td>Dry goods, ice, potable water</td>
+                                </tr>
+                                <tr>
+                                  <td>Chamber of Commerce</td>
+                                  <td>201 E. State St., Black Mountain, NC 28711</td>
+                                  <td>7 days/week, 9:00 am to 5:00 pm</td>
+                                  <td>Public info requests, volunteer coordination</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+    
+
+        <section id="official" class="tab-panel">
+            <h2>Unofficial Voluntary Resources</h2>
+
+            <!-- Subtab Menu -->
+            <nav class="subNav">
+                <ul>
+                    <li><a href="#subtab2-1">Subtab 1</a></li>
+                    <li><a href="#subtab2-2">Subtab 2</a></li>
+                </ul>
+            </nav>
+
+            <!-- Subtab Content -->
+            <div class="subtab-content">
+                <section id="subtab2-1" class="subtab-panel">
+                    <h4>Unofficial Resource 1</h4>
+                    <p>Details about the first unofficial resource.</p>
+                </section>
+
+                <section id="subtab2-2" class="subtab-panel">
+                    <h4>Unofficial Resource 2</h4>
+                    <p>Details about the second unofficial resource.</p>
+                </section>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

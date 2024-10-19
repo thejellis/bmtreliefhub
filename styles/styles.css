@@ -1,7 +1,10 @@
-/* Top Navigation  Styling .topnav */
+/*
+/*Top Navigation  Styling . */
 .topnav {
     background-color: #333;
     overflow: hidden;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
   }
   
   /* Style the links inside the navigation bar */
@@ -29,3 +32,150 @@
   .topnav .icon {
     display: none;
   }
+
+
+  /* Tabs for Tables  */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  .tableNav {
+    background-color: #333;
+  }
+  
+  .tableNav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .tableNav ul li {
+    margin-right: 10px;
+  }
+  
+  .tableNav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+    background-color:#333;
+    border-radius: 5px;
+    display: block;
+  }
+  
+  .tableNav ul li a:hover,
+  .tableNav ul li a:target {
+    background-color: #555;
+  }
+  
+
+  
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.tableNav ul, .subNav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ddd;
+}
+
+.tableNav ul li, .subNav ul li {
+    margin-right: 5px;
+}
+
+.tableNav ul li a, .subNav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s ease;
+}
+
+.tableNav ul li a:hover, .subNav ul li a:hover {
+    background-color: #bbb;
+}
+
+.tableNav ul li a.active, .subNav ul li a.active {
+    background-color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.tab-content, .subtab-content {
+    border: 1px solid #ddd;
+    border-radius: 0 5px 5px 5px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.tab-panel, .subtab-panel {
+    display: none;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+thead th {
+    background-color: #f4f4f4;
+}
+
+/* Show the tab content when clicked */
+#resourcesInfo:target,
+#official:target,
+#unofficial:target,
+#all:target {
+    display: block;
+}
+
+/* Show the subtab content when clicked */
+#resourcesInfo:target .subtab-panel,
+#official:target .subtab-panel {
+    display: block; /* Hide all subtab panels initially */
+}
+
+#subtab1-1:target,
+#subtab1-2:target,
+#subtab2-1:target,
+#subtab2-2:target {
+    display: block; /* Show the targeted subtab */
+}
+
+
+@media (max-width: 768px) {
+    .tableNav ul, .subNav ul {
+        flex-direction: column;
+    }
+}
