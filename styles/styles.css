@@ -146,16 +146,29 @@ th, td {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
+    vertical-align: top; /* Align items at the top */
+
 }
 
+
+ul {
+    list-style-type: disc; /* Default list style */
+    margin: 0; /* Remove default margin */
+    padding-left: 20px; /* Indent the list */
+}
+
+li {
+    margin-bottom: 5px; /* Space between list items */
+}
 thead th {
     background-color: #f4f4f4;
 }
 
 /* Show the tab content when clicked */
-#resourcesInfo:target,
-#official:target,
-#unofficial:target,
+#foodWater:target,
+#health:target,
+#supplies:target,
+#disasterRelief:target,
 #all:target {
     display: block;
 }
@@ -163,7 +176,7 @@ thead th {
 /* Show the subtab content when clicked */
 #resourcesInfo:target .subtab-panel,
 #official:target .subtab-panel {
-    display: block; /* Hide all subtab panels initially */
+    display: block; /* Hide all subtab paunels initially */
 }
 
 #subtab1-1:target,

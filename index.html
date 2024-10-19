@@ -1,173 +1,505 @@
+<!-- Black Mountain Recovery Reformatted Basic Website
+
+This script holds the home page of the static Black Mountain Recovery website with formatting and navigation to other pages.
+Date: 2024-10-19
+Author: Code with the Carolinas 
+
+-->
+
+
+
 <!DOCTYPE html>
 <html lang="en-US">
 
+
+<!-- Head, nothing in the <head> tag shows on website, except for <title> in the tab in browser tab
+  Note reference to internal style sheet saves at /stayles/styles.css -->
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Mountain Resources</title>
-    <link rel="stylesheet" href="/styles/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        /* Include your existing CSS here, with the new modifications */
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Mountain Resources</title>
+  <link rel="stylesheet" href="/styles/styles.css" />
 
-        /* Subtab visibility adjustments */
-        #resourcesInfo:target .subtab-panel,
-        #official:target .subtab-panel {
-            display: block; /* Hide all subtab panels initially */
-        }
+  <!-- Inline CSS Styling, this is to allow for the subtab population and does not need to be updated or maintained -->
+  <style>
+    /* Include your existing CSS here, with the new modifications */
 
-        #subtab1-1:target,
-        #subtab1-2:target,
-        #subtab2-1:target,
-        #subtab2-2:target {
-            display: block; /* Show the targeted subtab */
-        }
+    /* Subtab visibility adjustments */
+    #resourcesInfo:target .subtab-panel,
+    #official:target .subtab-panel {
+      display: block;
+      /* Hide all subtab panels initially */
+    }
 
-        /* Ensure that display: none is set for all subtab panels by default */
-        .subtab-panel {
-            display: block; 
-        }
-    </style>
+    #subtab1-1:target,
+    #subtab1-2:target,
+    #subtab2-1:target,
+    #subtab2-2:target {
+      display: block;
+      /* Show the targeted subtab */
+    }
+
+    /* Ensure that display: none is set for all subtab panels by default */
+    .subtab-panel {
+      display: block;
+    }
+  </style>
 </head>
 
-<body>
-    <header>
-        <h1>Black Mountain Resources Hub</h1>
-    </header>
 
-    <div class="topnav" id="myTopnav">
-        <a href="index.html">Home</a>
-        <a href="resources.html">Community Resources</a>
-        <a href="supplies.html">Request Supplies</a>
-        <a href="volunteers.html">Volunteers</a>
-        <a href="about.html">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
+<!-- 
 
-    <hgroup></br>
-        <h2>Community Resources List (Recursos Publicos): Black Mountain and Swannanoa</h2></br>
-        <p><a
-          href="http://www.blackmountainrecovery.org">Town of Black Mountain</a> &numsp;
- <a href="https://forms.gle/J2XJuHDAWMXzx2BP6">Volunteer Application</a></hgroup>
-  </br>
-  <p></p><strong>Mission Statement:</strong></br>
-    <p>
-      The Black Mountain Volunteer Corps is a community led coalition
-      dedicated to supporting volunteer initiatives, programs and actions of
-      community service in the wake of Hurricane Helene.
-    </p></br><p><strong>Last Updated: 15 October 2024</strong></p>
-  </br></p>
+    Body is where content on page starts it is broken into the following:
+    1. Header : Title of Page ()
+    2. Top Navigation Bar: click to go to other future pages 
+    3. Community Resource List, Links and Mission: INCLUDING LAST UPDATE DATE
+    4. Official Town Directed Tables
+    5. Unofficial Directed Tables grouped by category
+
+    The areas that will need to be updated with content would be in #3 , #4, and #5 
+
+    There is a table template saved in the assets folder as tableTemplate.html which has the general structure so that you can feel confident in adding, deleting, or updating tables
     
-    <div class="tab-content">
-      <section >
-          <h2>Official Town-Directed Resources</h2></br>
+    -->
 
-       <div class="table-container">
-                      <table>
-                          <thead>
-                              <tr>
-                                  <th>Provider</th>
-                                  <th>Address</th>
-                                  <th>Hours of Operation</th>
-                                  <th>Resources Provided</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <tr>
-                                  <td>Ingles Market</td>
-                                  <td>550 NC-9 Black Mountain, NC 28711</td>
-                                  <td>7 days/week, 9:00 am to 7:00 pm</td>
-                                  <td>Dry goods, ice, potable water</td>
-                              </tr>
-                              <tr>
-                                <td>Chamber of Commerce</td>
-                                <td>201 E. State St., Black Mountain, NC 28711</td>
-                                <td>7 days/week, 9:00 am to 5:00 pm</td>
-                                <td>Public info requests, volunteer coordination</td>
-                            </tr>
-                          </tbody>
-                      </table>
-                  </div>
-              </section>
-            </br>
-              <h2>Unofficial Voluntary Resources (<i></i> )
-              </h2></br>
+<body>
+  <!-- 1. Header -->
+  <header>
+    <h1>Black Mountain Resources Hub</h1>
+  </header>
+  <!-- 2. Top Navigation Bar, note the html pages for each of the future pages as needed. -->
+  <div class="topnav" id="myTopnav">
+    <a href="index.html">Home</a>
+    <a href="resources.html">Community Resources</a>
+    <a href="supplies.html">Request Supplies</a>
+    <a href="volunteers.html">Volunteers</a>
+    <a href="about.html">About</a>
 
-    <!-- Navigation for Tabs -->
+    </a>
+  </div>
+  <!--  3. Community Resource List, Links and Mission: 
+  **** Black Mountain Volunteer Corps to update for changes to links, mission AND LAST UPDATE DATE ****  
+  -->
+  <!--Page Title and Links-->
+  <hgroup></br> 
+    <h2>Community Resources List (Recursos Publicos): Black Mountain and Swannanoa</h2></br>
+    <p><a href="http://www.blackmountainrecovery.org">Town of Black Mountain</a> &numsp;
+      <a href="https://forms.gle/J2XJuHDAWMXzx2BP6">Volunteer Application</a>
+  </hgroup>
+  </br>
+  <!--Mission Statement-->
+  <p></p><strong>Mission Statement:</strong></br> <p>
+    The Black Mountain Volunteer Corps is a community led coalition
+    dedicated to supporting volunteer initiatives, programs and actions of
+    community service in the wake of Hurricane Helene.
+  </p></br>
+  <!-- Last Updated Date
+     **** Black Mountain Volunteer Corps to update for LAST UPDATE DATE ****  
+
+   Update by Typing over the Date, this is free text so you can format date and time as see fit-->
+  <p><strong>Last Updated: 15 October 2024</strong></p></br></p>
+
+<!-- 4. Official Town-Direct Resources 
+      **** Black Mountain Volunteer Corps to update for OFFICIAL Town Directed Resources Tables ****  
+
+      Official Tables Consist of 4 columns which are all aligned in width. The Headers (th) are:
+      1. Provider
+      2. Address
+      3. Hours of Operation
+      4. Resources Provided
+
+      For each record (row or tr), the text displayed on site to change is between <td> <\td> following same order as above for each record.
+      To italicize for spansih use <i> </i> around word
+
+      To add a new record (row);
+      1.  go to line betwee </tr> and </tbody> in location you want to enter
+      2. Add new line after </tr>
+      3 Paste the following in that new line with the text updated: for your entry
+              <tr>
+              <td>Chamber of Commerce</td>
+              <td>201 E. State St., Black Mountain, NC 28711</td>
+              <td>7 days/week, 9:00 am to 5:00 pm</td>
+              <td>Public info requests, volunteer coordination</td>
+            </tr>
+
+ -->
+
+
+  <div class="tab-content">
+    <section>
+      <h2>Official Town-Directed Resources (<i>Recursos Officiales Patrocinados por la Alcaldía</i>)</h2></br>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Provider</th>
+              <th>Address</th>
+              <th>Hours of Operation</th>
+              <th>Resources Provided</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ingles Market</td>
+              <td>550 NC-9 Black Mountain, NC 28711</td>
+              <td>7 days/week, 9:00 am to 7:00 pm</td>
+              <td>Dry goods, ice, potable water</td>
+            </tr>
+            <tr>
+              <td>Chamber of Commerce</td>
+              <td>201 E. State St., Black Mountain, NC 28711</td>
+              <td>7 days/week, 9:00 am to 5:00 pm</td>
+              <td>Public info requests, volunteer coordination</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    </br>
+
+  <!-- 4. UnOfficial Town-Direct Resources 
+      **** Black Mountain Volunteer Corps to update for UNOFFICIAL Non-Town Directed Resources Tables ****  
+
+      Tables Consist of 3 Columns which are all aligned in width. The Headers (th) are:
+      1. Provider
+      2. Address
+      3. Hours of Operation
+
+      For each record (row or tr), the text displayed on site to change is between <td> <\td> following same order as above for each record.
+      To italicize for spansih use <i> </i> around word
+
+      To add a new record (row);
+      1.  go to line betwee </tr> and </tbody> in location you want to enter
+      2. Add new line after </tr>
+      3 Paste the following in that new line with the text updated: for your entry
+              <tr>
+              <td>Chamber of Commerce</td>
+              <td>201 E. State St., Black Mountain, NC 28711</td>
+              <td>7 days/week, 9:00 am to 5:00 pm</td>
+            </tr>
+
+ -->  
+    <h2>Unofficial Voluntary Resources (<i></i> )
+    </h2></br>
+
+    <!-- Sub-Page Navigation Tabs for each grouping of Unofficial Resources
+           **** Black Mountain Volunteer Corps to update for UNOFFICIAL Non-Town Directed Resources Tables ****  
+    These are the groupings as of 2024-10-19:
+    Food and Water : Hot Meals, Potable Water
+    Health, Hygiene: and Medical: Medical and Mental Health, Pharmacies, Hot Showers, and Veternary Services
+    Clothing and Supplies: Clothing, shoes, blankets and towels and Misc. Dry Good Supplies Disribution
+    Disaster Relief: General Disaster Relief and FEMA Application Support
+    All: Currently blank but ideal for a select all option
+
+    To update the Navigation:
+    To Rename, change the text between the > and </a> for the line
+    To add, paste with your updated text and a # name to reference on CSS <li><a href="#CreateName">Create Text</a></li>
+    Using the # name you created, you will add a line in styles.css in the section that includes: #foodWater:target, updated for your #CreateName:target
+    To add content to the new text:, you will copy a table-ref block see below and update it to the id = to your CreateName and href to a unique $subtabX-Y
+    -->
+
     <nav class="tableNav">
-        <ul>
-            <li><a href="#official">Resources Information</a></li>
-            <li><a href="#official">Official Town-Directed Resources</a></li>
-            <li><a href="#unofficial">Unofficial Voluntary Resources</a></li>
-            <li><a href="#all">See all</a></li>
-        </ul>
+      <ul>
+        <li><a href="#foodWater">Food and Water</a></li>
+        <li><a href="#health">Health, Hygeine and Medical</a></li> 
+        <li><a href="#supplies">Clothing and Dry Good Supplies</a></li>
+        <li><a href="#disasterRelief">General Disaster Report and FEMA </a></li>
+        <li><a href="#all">See all</a></li>
+      </ul>
     </nav>
 
+
+
     <div class="tab-content">
-        <section id="resourcesInfo" class="tab-panel">
-            <h2>Community Resources List: Black Mountain and Swannanoa</h2>
-            <h3>Official Town-Directed Resources</h3>
+<!-- Food and Water Tables -->
+      <section id="foodWater" class="tab-panel">
+<!-- Place Holder to separate tables into tabs. No action needed at this point  -->
+        <nav class="subNav">
+          <ul>
+            <li><a href="#subtab1-1"></a></li>
+
+          </ul>
+<!-- Hot Meals Table: Start
+ **** Black Mountain Volunteer Corps to update for Up to date contents ****   -->
+          <h2>Hot Meals</h2>
+          <p>Details about the first official resource.</p>
+          <br>
+          <div class="table-container">
+            <table href="#subtab1-1">
+              <thead>
+                <tr>
+                  <th>Provider</th>
+                  <th>Address</th>
+                  <th>Hours of Operation</th>
+                  <th>Resources Provided</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ingles Market</td>
+                  <td>550 NC-9 Black Mountain, NC 28711</td>
+                  <td>7 days/week, 9:00 am to 7:00 pm</td>
+                  <td>
+                    <ul>
+                      <li> goods & miscellaneous supplies distribution, including ice (distribución de alimentos y
+                        provisiones, incluyendo hielo) </li>
+                      <li>tbs</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Chamber of Commerce</td>
+                  <td>201 E. State St., Black Mountain, NC 28711</td>
+                  <td>7 days/week, 9:00 am to 5:00 pm</td>
+                  <td>Public info requests, volunteer coordination</td>
+                </tr>
+              </tbody>
+            </table>
+<!-- Hot Meals Table: End-->
 
 
-                <section id="subtab1-1" class="subtab-panel">
-                    <h4>Resource 1 Information</h4>
-                    <p>Details about the first official resource.</p>
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Provider</th>
-                                    <th>Address</th>
-                                    <th>Hours of Operation</th>
-                                    <th>Resources Provided</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Ingles Market</td>
-                                    <td>550 NC-9 Black Mountain, NC 28711</td>
-                                    <td>7 days/week, 9:00 am to 7:00 pm</td>
-                                    <td>Dry goods, ice, potable water</td>
-                                </tr>
-                                <tr>
-                                  <td>Chamber of Commerce</td>
-                                  <td>201 E. State St., Black Mountain, NC 28711</td>
-                                  <td>7 days/week, 9:00 am to 5:00 pm</td>
-                                  <td>Public info requests, volunteer coordination</td>
-                              </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
+<!-- Potable Water Table: Start -->
 
-    
+        </nav><br>
+        <h2>Potable Water Supply - Bring your Own Jugs</h2>
+        <p>Details about the first official resource.</p>
+        <div class="table-container">
+          <table href="#subtab1-2">
+            <thead>
+              <tr>
+                <th>Provider</th>
+                <th>Address</th>
+                <th>Hours of Operation</th>
+                <th>Resources Provided</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ingles Market</td>
+                <td>550 NC-9 Black Mountain, NC 28711</td>
+                <td>7 days/week, 9:00 am to 7:00 pm</td>
+                <td>Dry goods, ice, potable water</td>
+              </tr>
+              <tr>
+                <td>Chamber of Commerce</td>
+                <td>201 E. State St., Black Mountain, NC 28711</td>
+                <td>7 days/week, 9:00 am to 5:00 pm</td>
+                <td>Public info requests, volunteer coordination</td>
+              </tr>
+            </tbody>
+          </table>
+          </nav>
+      </section>
 
-        <section id="official" class="tab-panel">
-            <h2>Unofficial Voluntary Resources</h2>
+<!-- Health, Hygeine and Medical Tables Section -->
+      <section id="health" class="tab-panel">
+<!-- Place Holder, no action needed here -->
+        <nav class="subNav">
+          <ul>
+            <li><a href="#subtab2-1"></a></li>
 
-            <!-- Subtab Menu -->
-            <nav class="subNav">
-                <ul>
-                    <li><a href="#subtab2-1">Subtab 1</a></li>
-                    <li><a href="#subtab2-2">Subtab 2</a></li>
-                </ul>
-            </nav>
+          </ul>
+<!-- Medical Table: Start -->
+          <h2>Hot Meals</h2>
+          <p>Details about the first official resource.</p>
+          <br>
+          <div class="table-container">
+            <table href="#subtab2-1">
+              <thead>
+                <tr>
+                  <th>Provider</th>
+                  <th>Address</th>
+                  <th>Hours of Operation</th>
+                  <th>Resources Provided</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ingles Market</td>
+                  <td>550 NC-9 Black Mountain, NC 28711</td>
+                  <td>7 days/week, 9:00 am to 7:00 pm</td>
+                  <td>Dry goods, ice, potable water</td>
+                </tr>
+                <tr>
+                  <td>Chamber of Commerce</td>
+                  <td>201 E. State St., Black Mountain, NC 28711</td>
+                  <td>7 days/week, 9:00 am to 5:00 pm</td>
+                  <td>Public info requests, volunteer coordination</td>
+                </tr>
+              </tbody>
+            </table>
+        </nav><br>
+  <!-- Medical Table: End -->
 
-            <!-- Subtab Content -->
-            <div class="subtab-content">
-                <section id="subtab2-1" class="subtab-panel">
-                    <h4>Unofficial Resource 1</h4>
-                    <p>Details about the first unofficial resource.</p>
-                </section>
+  <!-- Medical Table: Start -->
+        <h2>Potable Water Supply - Bring your Own Jugs</h2>
+        <p>Details about the first official resource.</p>
+        <div class="table-container">
+          <table href="#subtab2-2">
+            <thead>
+              <tr>
+                <th>Provider</th>
+                <th>Address</th>
+                <th>Hours of Operation</th>
+                <th>Resources Provided</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ingles Market</td>
+                <td>550 NC-9 Black Mountain, NC 28711</td>
+                <td>7 days/week, 9:00 am to 7:00 pm</td>
+                <td>Dry goods, ice, potable water</td>
+              </tr>
+              <tr>
+                <td>Chamber of Commerce</td>
+                <td>201 E. State St., Black Mountain, NC 28711</td>
+                <td>7 days/week, 9:00 am to 5:00 pm</td>
+                <td>Public info requests, volunteer coordination</td>
+              </tr>
+            </tbody>
+          </table>
+          </nav>
+      </section>
 
-                <section id="subtab2-2" class="subtab-panel">
-                    <h4>Unofficial Resource 2</h4>
-                    <p>Details about the second unofficial resource.</p>
-                </section>
-            </div>
-        </section>
+      <!-- Clothing and Supplies -->
+      <section id="supplies" class="tab-panel">
+        <!-- Subtab Menu -->
+        <nav class="subNav">
+          <ul>
+            <li><a href="#subtab3-1"></a></li>
+
+          </ul>
+
+          <h2>Hot Meals</h2>
+          <p>Details about the first official resource.</p>
+          <br>
+          <div class="table-container">
+            <table href="#subtab3-1">
+              <thead>
+                <tr>
+                  <th>Provider</th>
+                  <th>Address</th>
+                  <th>Hours of Operation</th>
+                  <th>Resources Provided</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ingles Market</td>
+                  <td>550 NC-9 Black Mountain, NC 28711</td>
+                  <td>7 days/week, 9:00 am to 7:00 pm</td>
+                  <td>Dry goods, ice, potable water</td>
+                </tr>
+                <tr>
+                  <td>Chamber of Commerce</td>
+                  <td>201 E. State St., Black Mountain, NC 28711</td>
+                  <td>7 days/week, 9:00 am to 5:00 pm</td>
+                  <td>Public info requests, volunteer coordination</td>
+                </tr>
+              </tbody>
+            </table>
+        </nav><br>
+        <h2>Potable Water Supply - Bring your Own Jugs</h2>
+        <p>Details about the first official resource.</p>
+        <div class="table-container">
+          <table href="#subtab3-2">
+            <thead>
+              <tr>
+                <th>Provider</th>
+                <th>Address</th>
+                <th>Hours of Operation</th>
+                <th>Resources Provided</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ingles Market</td>
+                <td>550 NC-9 Black Mountain, NC 28711</td>
+                <td>7 days/week, 9:00 am to 7:00 pm</td>
+                <td>Dry goods, ice, potable water</td>
+              </tr>
+              <tr>
+                <td>Chamber of Commerce</td>
+                <td>201 E. State St., Black Mountain, NC 28711</td>
+                <td>7 days/week, 9:00 am to 5:00 pm</td>
+                <td>Public info requests, volunteer coordination</td>
+              </tr>
+            </tbody>
+          </table>
+          </nav>
+      </section>
+      <!-- General Disaster Relief and FEMA  -->
+      <section id="disasterRelief" class="tab-panel">
+
+        <!-- Subtab Menu -->
+        <nav class="subNav">
+          <ul>
+            <li><a href="#subtab4-1"></a></li>
+
+          </ul>
+          <!-- Hot Meals Table  -->
+          <h2>Hot Meals</h2>
+          <p>Details about the first official resource.</p>
+          <br>
+          <div class="table-container">
+            <table href="#subtab4-1">
+              <thead>
+                <tr>
+                  <th>Provider</th>
+                  <th>Address</th>
+                  <th>Hours of Operation</th>
+                  <th>Resources Provided</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ingles Market</td>
+                  <td>550 NC-9 Black Mountain, NC 28711</td>
+                  <td>7 days/week, 9:00 am to 7:00 pm</td>
+                  <td>Dry goods, ice, potable water</td>
+                </tr>
+                <tr>
+                  <td>Chamber of Commerce</td>
+                  <td>201 E. State St., Black Mountain, NC 28711</td>
+                  <td>7 days/week, 9:00 am to 5:00 pm</td>
+                  <td>Public info requests, volunteer coordination</td>
+                </tr>
+              </tbody>
+            </table>
+        </nav><br>
+        <h2>Potable Water Supply - Bring your Own Jugs</h2>
+        <p>Details about the first official resource.</p>
+        <div class="table-container">
+          <table href="#subtab4-2">
+            <thead>
+              <tr>
+                <th>Provider</th>
+                <th>Address</th>
+                <th>Hours of Operation</th>
+                <th>Resources Provided</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ingles Market</td>
+                <td>550 NC-9 Black Mountain, NC 28711</td>
+                <td>7 days/week, 9:00 am to 7:00 pm</td>
+                <td>Dry goods, ice, potable water</td>
+              </tr>
+              <tr>
+                <td>Chamber of Commerce</td>
+                <td>201 E. State St., Black Mountain, NC 28711</td>
+                <td>7 days/week, 9:00 am to 5:00 pm</td>
+                <td>Public info requests, volunteer coordination</td>
+              </tr>
+            </tbody>
+          </table>
+          </nav>
+      </section>
     </div>
 </body>
+
 </html>
