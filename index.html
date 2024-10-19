@@ -40,6 +40,8 @@
     margin:0;
     padding: 0;
   }
+
+  
   /* Collapsible section */
   .collapsible {
             background-color: #333;
@@ -67,6 +69,45 @@
   }
   tr:nth-child(odd) {
             background-color:#f1f1f1
+        }
+/* Responsive table for mobile */
+        @media (max-width: 767px) {
+            table, th, td {
+                display: block;
+                width: 100%;
+            }
+
+            th, td {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            th, td {
+                display: block;
+                text-align: right;
+            }
+
+            th:before, td:before {
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            tr {
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Slightly larger font size for desktop */
+        @media (min-width: 768px) {
+            table {
+                font-size: 18px;
+            }
+
+            th, td {
+                padding: 15px;
+            }
         }
 </style>
 
