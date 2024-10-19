@@ -7,7 +7,7 @@
     position: sticky;
   }
   
-  /* Style the links inside the navigation bar */
+  /* Style the links inside the top navigation bar */
   .topnav a {
     font-family: Arial, Helvetica, sans-serif;
     float: left;
@@ -29,12 +29,10 @@
     color: white;
   }
   
-  .topnav .icon {
-    display: none;
-  }
 
 
-  /* Tabs for Tables  */
+
+/* Section Formatting for Drop Downs and Headers */
   * {
     box-sizing: border-box;
     margin: 0;
@@ -167,27 +165,6 @@ thead th {
     background-color: #f4f4f4;
 }
 
-/* Show the tab content when clicked */
-#foodWater:target,
-#health:target,
-#supplies:target,
-#disasterRelief:target,
-#all:target {
-    display: block;
-}
-
-/* Show the subtab content when clicked */
-#resourcesInfo:target .subtab-panel,
-#official:target .subtab-panel {
-    display: block; /* Hide all subtab paunels initially */
-}
-
-#subtab1-1:target,
-#subtab1-2:target,
-#subtab2-1:target,
-#subtab2-2:target {
-    display: block; /* Show the targeted subtab */
-}
 
 /* Table Widths */
 
@@ -212,11 +189,4 @@ th {
 /* For additional spacing and margins */
 .table-container {
     margin-bottom: 20px; /* Space between tables */
-}
-
-
-@media (max-width: 768px) {
-    .tableNav ul, .subNav ul {
-        flex-direction: column;
-    }
 }
