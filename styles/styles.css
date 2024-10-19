@@ -186,6 +186,31 @@ thead th {
     display: block; /* Show the targeted subtab */
 }
 
+/* Table Widths */
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Makes the borders share space between cells */
+    table-layout: fixed; /* Ensures fixed column widths */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Add borders to table cells */
+    padding: 8px; /* Padding for better spacing */
+    text-align: left; /* Align text to the left */
+    word-wrap: break-word; /* Allows long text to break and wrap */
+}
+
+th {
+    background-color: #f2f2f2; /* Light background for headers */
+    font-weight: bold; /* Bold text for headers */
+}
+
+/* For additional spacing and margins */
+.table-container {
+    margin-bottom: 20px; /* Space between tables */
+}
+
 
 @media (max-width: 768px) {
     .tableNav ul, .subNav ul {
