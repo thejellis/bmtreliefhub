@@ -99,11 +99,11 @@ Author: Code with the Carolinas
  -->
 
 
-  <div class="tab-content">
+ <details class="tab-content"><summary>Official Town-Directed Resources</summary>
     <section>
       <h2>Official Town-Directed Resources (<i>Recursos Officiales Patrocinados por la Alcaldía</i>)</h2></br>
 
-      <div class="table-container">
+      <details class="table-container">
         <table>
           <thead>
             <tr>
@@ -173,8 +173,9 @@ Author: Code with the Carolinas
             </tr>
           </tbody>
         </table>
-      </div>
+      
     </section>
+  </details>
     </br>
 
   <!-- 4. UnOfficial Town-Direct Resources 
@@ -201,7 +202,7 @@ Author: Code with the Carolinas
  -->  
     <h2>Unofficial Voluntary Resources (<i>Recursos Voluntarios no Officiales</i>)
     </h2></br>
-    <p>(INFORMATION PROVIDED ONLY AS A COURTESY; THE TOWN OF BLACK MOUNTAIN IS NOT RESPONSIBLE FOR THIS INFORMATION; <i>INFORMACIÓN PROVISTA SOLO COMO CORTESIA, EL PUEBLO DE BLACK MOUNTAIN NO ES RESPONSABLE POR ESTA INFORMACIÓN)</i></p>
+    <p>INFORMATION PROVIDED ONLY AS A COURTESY; THE TOWN OF BLACK MOUNTAIN IS NOT RESPONSIBLE FOR THIS INFORMATION; <br> <i>(INFORMACIÓN PROVISTA SOLO COMO CORTESIA, EL PUEBLO DE BLACK MOUNTAIN NO ES RESPONSABLE POR ESTA INFORMACIÓN)</i></p>
 <br>
     <!-- Sub-Page Navigation Tabs for each grouping of Unofficial Resources
            **** Black Mountain Volunteer Corps to update for UNOFFICIAL Non-Town Directed Resources Tables ****  
@@ -218,28 +219,8 @@ Author: Code with the Carolinas
     Using the # name you created, you will add a line in styles.css in the section that includes: #foodWater:target, updated for your #CreateName:target
     To add content to the new text:, you will copy a table-ref block see below and update it to the id = to your CreateName and href to a unique $subtabX-Y
     -->
+    <details class="tab-content"><summary>Hot Meals</summary>
 
-    <nav class="tableNav">
-      <ul>
-        <li><a href="#foodWater">Food and Water</a></li>
-        <li><a href="#health">Health, Hygeine and Medical</a></li> 
-        <li><a href="#supplies">Clothing and Dry Good Supplies</a></li>
-        <li><a href="#disasterRelief">General Disaster Report and FEMA </a></li>
-        <li><a href="#all">See all</a></li>
-      </ul>
-    </nav>
-
-
-
-    <div class="tab-content">
-<!-- Food and Water Tables -->
-      <section id="foodWater" class="tab-panel">
-<!-- Place Holder to separate tables into tabs. No action needed at this point  -->
-        <nav class="subNav">
-          <ul>
-            <li><a href="#subtab1-1"></a></li>
-
-          </ul>
 <!-- Hot Meals Table: Start
  **** Black Mountain Volunteer Corps to update for Up to date contents ****   -->
           <h2>Hot Meals</h2>
@@ -277,9 +258,9 @@ Author: Code with the Carolinas
             </table>
 <!-- Hot Meals Table: End-->
 
-
+          </details>
 <!-- Potable Water Table: Start -->
-
+<details class="tab-content"><summary>Potable Water Supply - Bring Your Own Jugs (<i>agua potable – traiga sus propias botellas</i>)</summary>
         </nav><br>
         <h2>Potable Water Supply - Bring your Own Jugs</h2>
         <p>(<i>agua potable – traiga sus propias botellas</i>)</p>
@@ -315,15 +296,10 @@ Author: Code with the Carolinas
           </table>
           </nav>
       </section>
+    </details>
+    <!-- Potable Water Table: End -->
 
-<!-- Health, Hygeine and Medical Tables Section -->
-      <section id="health" class="tab-panel">
-<!-- Place Holder, no action needed here -->
-        <nav class="subNav">
-          <ul>
-            <li><a href="#subtab2-1"></a></li>
-
-          </ul>
+    <details class="tab-content"><summary>Medical & mental health care (<i>Atencion medica y Salud Mental</i>)</summary>
 <!-- Medical Table: Start -->
           <h2>Medical & mental health care (<i>Atencion medica y Salud Mental</i>)</h2>
                   <!-- <p>Details about the first official resource.</p> --> <br>
@@ -363,9 +339,16 @@ Author: Code with the Carolinas
               </tbody>
             </table>
         </nav><br>
-  <!-- Medical Table: End -->
+        
+    </details>
 
+     <!-- Medical Table: End -->
   <!-- Pharmacy Table: Start -->
+
+    <details class="tab-content"><summary>Pharmacies (<i>farmacias</i>)</summary>
+ 
+
+   
         <h2>Pharmacies (<i>farmacias</i>)</h2>
         <!-- <p>Details about the first official resource.</p> --> <br>
         <div class="table-container">
@@ -410,8 +393,16 @@ Author: Code with the Carolinas
             </tbody>
           </table>
           </nav>
-  <!-- Pharmacy Table: End --> <br>
+        </details>
+      
+      
+  <!-- Pharmacy Table: End --> 
+
+  
  <!-- Mobile SHowers Table: Start -->
+      
+      
+<details class="tab-content"><summary>Mobile hot showers (<i>Regaderas calientes</i>)</summary>
  <h2>Mobile hot showers (<i>Regaderas calientes</i>)</h2>
  <!-- <p>Details about the first official resource.</p> --> <br>
  <div class="table-container">
@@ -443,8 +434,10 @@ Author: Code with the Carolinas
      </tbody>
    </table>
    </nav>
+  </details>
      <!-- Mobile Shower Table: End -->
        <!-- Veterniary  Table: Start -->
+       <details class="tab-content"><summary>Veterinary Care (<i>Veterinarios</i>)</summary>
        <h2>Veterinary Care (<i>Veterinarios</i>)</h2>
        <!-- <p>Details about the first official resource.</p> --> <br>
        <div class="table-container">
@@ -468,18 +461,16 @@ Author: Code with the Carolinas
          </table>
          </nav>
            
-  <!-- Veternarian Table: End -->
 
-      </section>
 
-      <!-- Clothing and Supplies -->
-      <section id="supplies" class="tab-panel">
-        <!-- Subtab Menu -->
-        <nav class="subNav">
-          <ul>
-            <li><a href="#subtab3-1"></a></li>
+      </section> </details>
+        <!-- Veternarian Table: End -->
+         
 
-          </ul>
+<!-- Clothing and Supplies: Start -->  
+      <details class="tab-content"><summary>Clothing, shoes, blankets and towels (<i>ropa, zapatos, cobijas y
+        toallas</i>)</summary>
+        
 
           <h2>Clothing, shoes, blankets and towels (<i>ropa, zapatos, cobijas y
             toallas</i>)</h2>
@@ -510,7 +501,12 @@ Author: Code with the Carolinas
                   </tr>
               </tbody>
             </table>
-        </nav><br>
+        </nav></details>
+        <!-- Clothing and Supplies Table: End -->
+         
+
+<!-- Dry Goods: Start --> 
+        <details class="tab-content"><summary>Dry goods & miscellaneous supplies distribution (<i>distribución de alimentos y provisiones</i>)</i>)</summary>
         <h2>Dry goods & miscellaneous supplies distribution (<i>distribución de alimentos y provisiones</i>)</h2>
                 <!-- <p>Details about the first official resource.</p> --> <br>
 </p>
@@ -564,15 +560,17 @@ Author: Code with the Carolinas
           </table>
           </nav>
       </section>
-      <!-- General Disaster Relief and FEMA  -->
-      <section id="disasterRelief" class="tab-panel">
+    </details>
+      
+      
+    <!--  Mobile SHowers Table: End --> 
+  
+    
+   <!-- FEMA Table: Start -->
+        
+        
+  <details class="tab-content"><summary>FEMA Application Support</summary>
 
-        <!-- Subtab Menu -->
-        <nav class="subNav">
-          <ul>
-            <li><a href="#subtab4-1"></a></li>
-
-          </ul>
           <!-- Hot Meals Table  -->
           <h2>FEMA Application Support</h2>
                   <!-- <p>Details about the first official resource.</p> --> <br>
@@ -589,7 +587,17 @@ Author: Code with the Carolinas
                   </tr>
               </tbody>
             </table>
-        </nav><br>
+        </nav>
+      </details>
+      
+      
+      <!-- FEMA Table: End --> 
+    
+      
+     <!-- General Disaster Relief: Start -->
+          
+          
+    <details class="tab-content"><summary>General Disaster Relief</summary>
         <h2>General Disaster Relief</h2>
                 <!-- <p>Details about the first official resource.</p> --> <br>
 </p>
@@ -629,6 +637,7 @@ Author: Code with the Carolinas
           </table>
           </nav>
       </section>
+    </details>
     </div>
 </body>
 
